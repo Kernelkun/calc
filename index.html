@@ -1,8 +1,11 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+  <!-- Material Design Lite -->
+  <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,26 +25,138 @@
     
   <!-- jQuery -->
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-
-  <!-- Share Button -->
-  <link href="css/share-button.css" rel="stylesheet">
     
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
 </head>
 
 <body>
-  <div class="container-fluid">
-      <div class="row ">
-        
+  <div class="container-fluid text-center">
+      <div class="col-md-3 col-md-offset-2 calc-body">
+          <div class="row">
+            <div id="screen" class="screen40"><input class="text-right" type="text" maxlength="40" size="30" id="Display" readonly></div>
+          </div>
+          <div class="row" id="row-1">
+            <div class="col-md-3" id="ce">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AllClear()">
+                <i>CE</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="c">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Clear()">
+                <i>C</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="del">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Del()">
+                <i>DEL</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="slash">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Operate(2)">
+                <i>/</i>
+              </button>
+            </div>
+          </div>
+          <div class="row" id="row-2">
+            <div class="col-md-3" id="7">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('7')">
+                <i>7</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="8">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('8')">
+                <i>8</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="9">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('9')">
+                <i>9</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="x">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Operate(3)">
+                <i>x</i>
+              </button>
+            </div>
+          </div>
+          <div class="row" id="row-3">
+            <div class="col-md-3" id="4">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('4')">
+                <i>4</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="5">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('5')">
+                <i>5</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="6">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('6')">
+                <i>6</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="minus">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Operate(1)">
+                <i>-</i>
+              </button>
+            </div>
+          </div>
+          <div class="row" id="row-4">
+            <div class="col-md-3" id="1">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('1')">
+                <i>1</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="2">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('2')">
+                <i>2</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="3">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('3')">
+                <i>3</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="plus">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Operate(0)">
+                <i>+</i>
+              </button>
+            </div>
+          </div>
+          <div class="row" id="row-5">
+            <div class="col-md-3" id="plusminus">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="PlusMinus()">
+                <i>&#177;</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="0">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="AddDigit('0')">
+                <i>0</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="dot">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Dot()">
+                <i>,</i>
+              </button>
+            </div>
+            <div class="col-md-3" id="equal">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" OnClick="Calculate()">
+                <i>=</i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3 col-md-offset-1 material-card">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Help! I'm just a photo! Call the cops.</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            This is a simple calculator. You can check my progress in <a href="http://www.freecodecamp.org/kernelkun">FreeCodeCamp</a>.
+          </div>
+        </div>
       </div>
   </div>
 

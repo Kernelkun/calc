@@ -1,0 +1,119 @@
+body {
+    background-color: #4DD0E1;
+}
+
+i {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+}
+
+#slash {
+    background-color: #757575;
+}
+
+#x {
+    background-color: #757575;
+}
+
+#minus {
+    background-color: #757575;
+}
+
+#plus {
+    background-color: #757575;
+}
+
+#equal {
+    background-color: #757575;
+}
+
+.screen40 {
+    font-size: 40pt;
+}
+
+.screen30 {
+    font-size: 30pt;
+}
+
+.screen20 {
+    font-size: 20pt;
+}
+
+.screen10 {
+    font-size: 10pt;
+}
+
+input[type=text] {
+    color: #777;
+    border: 0px;
+    height: 200px;
+    width: 100%;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn-calc {
+    border-radius:50%;
+    font-size:24px;
+    height:56px;
+    margin:auto;
+    min-width:56px;
+    width:56px;
+    padding:0;
+    overflow:hidden;
+    background:rgba(158,158,158,.2)
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+    position:relative;
+    line-height:normal;
+}
+
+.calc-body {
+    margin-top: 100px;
+    background-color: #424242;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+#row-1 div{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#row-2 div{
+    padding-bottom: 10px;
+}
+
+#row-3 div{
+    padding-bottom: 10px;
+}
+
+#row-4 div{
+    padding-bottom: 10px;
+}
+
+#row-5 div{
+    padding-bottom: 10px;
+}
+
+/**** MATERIAL ***/
+.material-card {
+    margin-top: 100px;
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+  background: url('../img/photo.jpg');
+  background-size: 100%;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
